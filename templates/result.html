@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Result {% endblock title %}
+
+{% block contents %}
+<div class="container" style="	margin-top: 200px !important;
+	background-color: black !important;
+	border-radius: 100px solid white !important;
+	opacity: 0.7 !important;
+  color: #fff;
+  padding-top:30px; padding-bottom: 30px;">
+    <center>
+    {% for i,j in ans.items %}
+        <h3>According to {{i}} you have {{j}}</h3><br>
+    {% endfor %}
+    </center>
+</div>
+{% endblock contents %}
