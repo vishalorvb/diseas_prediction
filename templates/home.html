@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block contents %}
+
+<div class="dec1 container">
+    <div class="container my-4">
+        <div class="form-group">
+            <div class="form-class">
+                <center>
+                <h3 class="glow font-weight-bold  text-white" style="border-bottom: 2px solid white ;  "> Get Yourself Checked </h3>
+                <br>
+                
+                <h3 class="glow font-weight-bold  text-white" > Enter Your Symptoms </h3>
+                </center>
+                <div style="display: flex;">
+                <div style="margin: 40px;">
+	                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAADExMSwsLBoaGhJSUkcHByamprX19f6+vqDg4Pp6enBwcFkZGS0tLSVlZU7Ozt5eXnb29vMzMzh4eGIiIju7u5SUlJDQ0OqqqqioqJdXV0UFBQgICBaWlq8vLwuLi5ubm4VFRU2NjYqKioEN1Y6AAAKSElEQVR4nO2d60LqOhCFQUCucikXFfGC7vd/xrPpDPtk6eokKUVRZ/1rSaf5EJt0MjNptVwul8vlcrlcLtdnazO5ytFkI5ct5UgOhqWNSSFHq0nYUJV6l+VJvaKatPOkUHM5koOxHCzkaCZHg/Auw1Tz85N6RXWVaetKLuvJERCO5KgvR/UIeyf1yglzbDnhjybcyhEQtlLNn49wMe3Ymi6qCYf3ZZP7/kHbByDclif179qbhqbW4T2fGWFuryzCqdFENK0mRFNtIIRzezC1hKsZYW6vLMJO1FanHuF1eK7LTBmEub1yQif8XYRvUcKVnHwkhPdyhJNJOfd2bsLZTfe9bmbMVjEoZRA+lVfv4ZwSbuRifCGQc8VJvUogvGl/1E2qrfgw3TU6cq5evbPVre7WFxKe1CsndEInRD18I8Lb3fVf0fGw0xpWqDVol1dtpf26PFJVmPo6QmNOYwzTA2nRl6MR3MYJndAJndB+lsqTcgKmjs9PJCyv6pcftkY7eJaG7S+AEDSG9mrqSY6GpL2aYn4a+vZ0oYTdKGHyG7ATOuHvIqz3Nr1hhGqK3TOXsMl3/FyPiPhW8KUCTD0MmEPnQT6SI3H5rAzCJv00howvHtVhLQzDb+HFl+NNxP4bhOIvvTYM95wwu1coJ7RtfSPCmit1TRDeVRM2uX6Yu9r6LGdlgXctH93Keq8uCG8I4UY+02FiGdrYMsIm14CTpbYgYkhH/LUcYaQCEOr7oY5l2jv9Khhhbq+aJEyOxWCE+AY8dkIn/PWENaMAgXDDCHWt8zFKCE+aM8Qm1ozkVML16KAFI9yXH613IaHe7L78aNQRk2JjtDxXfGlN9cgXiYQgHPFxInIX/hwuRw0SMtfrBcgJnfDyCefNEcIU9wxaznt/NX+Wo9Fd73/dyrnirfdB88H4IHSyxQnF1F1/U168vgtNyUd71ivVbWWv5rhAgDL8djs5NyA9xolIMmF8TnPHeqXaVfeqpkcYu/U5hNY7PpsAOqET/ghCXLh9CC97lHOrVEL1YmxZezD1L56mFLxb6ArpkhE+VvfKIlSxVx7UtvriDWl+jKBtka+CipnC5WRD6YQsdFnVr754TJpn58wwU8bqmhM6oRN+LiFbAz4D4bqcLo9xXb48NR6U8+QeLHUeTUkLfbZf98KGMKPXYWIDE2r2PoDvbS/xmXcyoYolSaiDbMkI4ZyV2ZUssGiMYXUJ4+EFSJicM5Mq/MEb/ztO6ITfjnBW3a04Ib6Yq9gUFwktV3zzhJNF6Z4fh4Q78bfvxdbtOnTFi5bikF/LUWcUaiotXgnhUm6m3wEUoFCJV38yZoSL8C7bml59IdT3lEJ6p89lFtiLKzMqNkzTjBLma9N3uvtoT+v+HOJLYkCIq2sqI9wOVS+gWlX3X9oJnfCg70CIT5pcQnD5qGhmF1s/pH4apnTC5ewQtjPD0UIigLadoCaExgOp9FkHVSNmOqZekQAf7MikvGcfTG3k3KKacCgtprmExoifmwcc/+JVGDEkou+HoGFmr44yZm25+YfJhOgvFSUTZk8AndAJD/pOhHAbfcTTUg+g5KBQFUYMiajPGwW9SiAclJkBN/eSE6B+pkEodc9jqYdRmSDwxAh7+yBr4IlllEg2ws20vGexCLMMFkVw52IrGQ3aA7G7L8JeNRkFjWLDNA1Gi+fMQIzwHTTEXxasAVNTTRLGq7ckE7I4b0rIAqqd0Al/MyFzPaDPu01a0G4lEzKLjVQzG4TFHY55yaswL3lcttiNJIH5X7fKo5fDR68vmYRXkhKtBSj0Ms2dDrvzuGuGkIhNRIwo6Ndswspe0WWsrydMiNxzQid0QkoYls2xn6VKqM/SskX4LL1+gZoQU2kBBShEr7ctLUARPkuhAMWQdacmoX5b1EHGakG3wdRD2ELHsidmCkRTN1Rs8pCgOGHcyRnPx7dMgegP3gltOeGPIaTOlXqEaqoe4fmeNDPmpyndKd116DoZYGbXqjy3lIa3oaliHfppLELwzFylEg7lArZKzAlV7D2lgBaYnSeiEUMF9McgxFCqVEJMKc4mjMcbGxMRNBUnTE6/YYQJkQpO6ISXT4gZt8mERqkHFXvS3LAegCnVghHCVelPmtWMlPtnhA9hTQgs9fA2DVeJ++Fi8XGVeBYuJ2PFIbxM1pEnQDjqB4vFOtyOZdE6PYJzGyXEiCFIklDRiCH4aRXJXzwQFnCzZCZqq14SPSVktb7S/3mivcqWEzrh5RNqtAkEhVqxiZ/zpMFe6W1q0B0kW4ldzcJSD1Z8qRysGaGEqmp86XHfMjk3k3Or6n5s9GLSq5FWkqhJqErO3WDDtBLiF6+Eco6O+CAaQGYUKMxWcv5NfKqVPGuLExpFJp3QCX8lIfNiqDAPmBHGfd64lSL2qglAixBz15RQzulA/kdyy14Ioaaw6Sj6PK9MOBtCQ+xVmMB2NyIXn0iIExHDm9hmhKDc0GXWq/jAk27rMgmTNwNJsOWETvhRF0qI+ahxQmN6nZustCfm4wMPV+54yGxgXYz4+yHz6lPVZMoljJevynVysskD1ZfM2pzQCT+fMPkd/9sSYn0GouN0GWbeOE9GwpVMpeUjrdd2zOKSi7thMYgdu+k1MUWn6E0Kvvg3g7Bd/cc2akGj9sRU+spMTcUDe0HUyWlUwkIZ9bnSs9Vz5YROeNCPItwxG59EeFotaNFbWfhhUjDCUVjp+Vh3SO7Zl0LS7FmKVSNOIzytnjfIWnyXA0z0M8qkYNWI0whPq8kOMgIoEtIigTC5mqMTOqETouiTBgjVjUurmQGh8aTBeWlCNbOaO7rgaCEXL4FwNg0ihlphXYmt9ngh0UFstBiX7e9XQAgRQxDHNDPcXnV35YmP+AWxgaGqquQRH85hLJrltqtZJyU5adDoVi4he5luQ6+c0Al/FyHbtLAmYbIXgwUfZRMm7xbJNp6khFrqwSCUVAaluN5/6EB3/yckHD4FORLFLJcwd8fPOKFR7j9XbHqUncudu2trnNAIqG6C8Oy75TqhE35rQp0Ms13JagruqWvA8cpHdQklPflYfvWxTDfGHR61rEObEPbDBOb3kwfNdCZ6JEnTeNAkYb3dkOJrT/G987KjoJ3QCZ3wuxM+BqUb3lXggbIO8gDkz9LbV1Y1AqA+mvq0ZymYwjzg5H1mjJp7hqmzj4fxSljJ+1sYdRMNU2ef0zihE34ZYfI7frwyJHqEmyPEWhbZhMl+GqjuKRUciml48c0Eik3IxX9KL8weB1ODUAqFHqt7kloWxb3U/zTCdRupDW6lY4Fwn5k4Ia416Ek5wCrjls5GGP+XjhPG985zQif8SYS564eg3D1KvoQwdw34GT7shzUhVFuoA8EIcQ1Yv6wZqTyxaYIwWUoIezpbewWpGGG8pkVyDv0ZCE+q3pKcM+OETvhLCGvGJsKTZs5MMcLkTQhUuHOKGgbChEj2mvGly/Dkkph6t1HY5GN8acJWYitoeBVWjdAIVCtUyOVyuVwul8vlcp1V/wHWUdyoAHoxdAAAAABJRU5ErkJggg==" class="img-c"
+	                            alt="last">
+	                    </div>
+                    <div style="margin-top: 15px; padding-left: 50px;">
+                        <form method="POST" action = "http://127.0.0.1:8000/result">
+                        
+                            {% csrf_token %}
+                            <select  id="select"  name = "s1" style="color: antiquewhite !important;
+                                                                     border-radius: 20px !important;
+                                                                     background: black !important;">
+                                <option value="default">Select Symptom 1</option>
+                            </select>
+                            
+                            <select class = "mx-4 my-4" id="select1" name = "s2" style="color: antiquewhite !important;
+                                                                     border-radius: 20px !important;
+                                                                     background: black !important;">
+                                <option value="default">Select Symptom 2</option>
+                            </select>
+                            <br>
+
+                            <select class = "my-4" id="select2" name = "s3" style="color: antiquewhite !important;
+                                                                     border-radius: 20px !important;
+                                                                     background: black !important;">
+                                <option value="default">Select Symptom 3</option>
+                            </select>
+                            <select class = "mx-4 my-4" id="select3" name = "s4" style="color: antiquewhite !important;
+                                                                     border-radius: 20px !important;
+                                                                     background: black !important;">
+                                <option value="default">Select Symptom 4</option>
+                            </select>
+                            
+                            <br>
+                            <select class = "my-4" id="select4" name = "s5" style="color: antiquewhite !important;
+                                                                     border-radius: 20px !important;
+                                                                     background: black !important;">
+                                <option value="default">Select Symptom 5</option>
+                            </select>
+                             <button class="my-4 btn button-class font-weight-bold btn-primary btn-block"
+	                                style="width:40%;" type="submit">Show Result</button>
+                        </form>
+                        {{msg}}
+                        <br> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var arr =[
+        "back_pain",
+        "constipation",
+        "abdominal_pain",
+        "diarrhoea",
+        "mild_fever",
+        'yellow_urine',
+        'yellowing_of_eyes',
+        'acute_liver_failure',
+        'fluid_overload',
+        'swelling_of_stomach',
+        'swelled_lymph_nodes',
+        'malaise',
+        'blurred_and_distorted_vision',
+        'phlegm',
+        'throat_irritation',
+        'redness_of_eyes',
+        'sinus_pressure',
+        'runny_nose',
+        'congestion',
+        'chest_pain',
+        'weakness_in_limbs',
+        'fast_heart_rate',
+        'pain_during_bowel_movements',
+        'pain_in_anal_region',
+        'bloody_stool',
+        'irritation_in_anus',
+        'neck_pain',
+        'dizziness',
+        'cramps',
+        'bruising',
+        'obesity',
+        'swollen_legs',
+        'swollen_blood_vessels',
+        'puffy_face_and_eyes',
+        'enlarged_thyroid',
+        'brittle_nails',
+        'swollen_extremeties',
+        'excessive_hunger',
+        'extra_marital_contacts',
+        'drying_and_tingling_lips',
+        'slurred_speech',
+        'knee_pain',
+        'hip_joint_pain',
+        'muscle_weakness',
+        'stiff_neck',
+        'swelling_joints',
+        'movement_stiffness',
+        'spinning_movements',
+        'loss_of_balance',
+        'unsteadiness',
+        'weakness_of_one_body_side',
+        'loss_of_smell',
+        'bladder_discomfort',
+        'foul_smell_of urine',
+        'continuous_feel_of_urine',
+        'passage_of_gases',
+        'internal_itching',
+        'toxic_look_(typhos)',
+        'depression',
+        'irritability',
+        'muscle_pain',
+        'altered_sensorium',
+        'red_spots_over_body',
+        'belly_pain',
+        'abnormal_menstruation',
+        'dischromic _patches',
+        'watering_from_eyes',
+        'increased_appetite',
+        'polyuria','family_history','mucoid_sputum',
+        'rusty_sputum','lack_of_concentration','visual_disturbances','receiving_blood_transfusion',
+        'receiving_unsterile_injections','coma','stomach_bleeding','distention_of_abdomen',
+        'history_of_alcohol_consumption','fluid_overload','blood_in_sputum','prominent_veins_on_calf',
+        'palpitations','painful_walking','pus_filled_pimples','blackheads','scurring','skin_peeling',
+        'silver_like_dusting','small_dents_in_nails','inflammatory_nails','blister','red_sore_around_nose',
+        'yellow_crust_ooze'
+];
+    var select = document.getElementById("select")
+    for(var i = 0; i < arr.length; i++)
+             {
+                 var option = document.createElement("option"),
+                     txt = document.createTextNode(arr[i]);
+                 option.appendChild(txt);
+                 option.setAttribute("value",arr[i]);
+                 select.insertBefore(option,select.lastChild);
+             }
+    var select1 = document.getElementById("select1")
+    for(var i = 0; i < arr.length; i++)
+             {
+                 var option = document.createElement("option"),
+                     txt = document.createTextNode(arr[i]);
+                 option.appendChild(txt);
+                 option.setAttribute("value",arr[i]);
+                 select1.insertBefore(option,select1.lastChild);
+             }
+    var select2 = document.getElementById("select2")
+    for(var i = 0; i < arr.length; i++)
+             {
+                 var option = document.createElement("option"),
+                     txt = document.createTextNode(arr[i]);
+                 option.appendChild(txt);
+                 option.setAttribute("value",arr[i]);
+                 select2.insertBefore(option,select2.lastChild);
+             }
+             var select = document.getElementById("select3")
+    for(var i = 0; i < arr.length; i++)
+             {
+                 var option = document.createElement("option"),
+                     txt = document.createTextNode(arr[i]);
+                 option.appendChild(txt);
+                 option.setAttribute("value",arr[i]);
+                 select3.insertBefore(option,select3.lastChild);
+             }var select4 = document.getElementById("select4")
+    for(var i = 0; i < arr.length; i++)
+             {
+                 var option = document.createElement("option"),
+                     txt = document.createTextNode(arr[i]);
+                 option.appendChild(txt);
+                 option.setAttribute("value",arr[i]);
+                 select4.insertBefore(option,select4.lastChild);
+             }
+</script>
+
+{% endblock contents %}
