@@ -94,5 +94,5 @@ def result(request):
         ans['Navie Bayes'] = disease[a]
     else:
         ans['Navie Bayes'] = "Not Found"
-    #print(ans)
+    print(ans)
     return render(request,"result.html",{"ans":ans})
