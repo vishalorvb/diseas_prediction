@@ -14,7 +14,7 @@ RUN pip install  -r requirements.txt
 EXPOSE 8000
  
 # Define environment variable for Django
-ENV DJANGO_SETTINGS_MODULE=myapp.settings
+# ENV DJANGO_SETTINGS_MODULE=prediction.settings
  
 # Run app.py when the container launches
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
